@@ -19,29 +19,21 @@ namespace CSharpConsoleFunctions
                 var MyMood = Console.ReadLine();
                 switch (MyMood)
                 {
-                   case "1":            
+                    case "1":
                         DrawSmileyFace();
-                        DrawSpeakingBaloon(55, 10);
-                        Console.SetCursorPosition(61, 4);
-                        Console.WriteLine("I AM HAPPY");
+                        FaceSPeakingText("I AM HAPPY");
                         break;
                     case "2":
                         DrawSadFace();
-                        DrawSpeakingBaloon(55, 10);
-                        Console.SetCursorPosition(61, 4);
-                        Console.WriteLine("I AM SAD");
+                        FaceSPeakingText("I AM SAD");
                         break;
                     case "3":
                         DrawSuprisedFace();
-                        DrawSpeakingBaloon(55, 10);
-                        Console.SetCursorPosition(61, 4);
-                        Console.WriteLine("I AM SUPRISED");
+                        FaceSPeakingText("I AM SUPRISED");
                         break;
                     case "4":
                         DrawSmileyFace();
-                        DrawSpeakingBaloon(55, 10);
-                        Console.SetCursorPosition(61, 4);
-                        Console.WriteLine("BYE BYE");
+                        FaceSPeakingText("BYE BYE !");
                         exit = false;
                         break;
                     default:
@@ -52,6 +44,13 @@ namespace CSharpConsoleFunctions
                 Console.ReadKey();
                 Console.Clear();
             } while (exit);
+        }
+
+        private static void FaceSPeakingText(string SpeechText)
+        {
+            DrawSpeakingBaloon(55, 10);
+            Console.SetCursorPosition(61, 4);
+            Console.WriteLine(SpeechText);
         }
 
         private static void DrawSmileyFace()
